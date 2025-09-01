@@ -29,7 +29,7 @@
 
 ## 📥 Installation
 
-1. Download the latest release from [SpigotMC]() / [Modrinth]().
+1. Download the latest release from [SpigotMC]() / [Modrinth](https://modrinth.com/plugin/hopperflow-governor).
 2. Drop `HopperFlowGovernor-x.x.x.jar` into your server’s `plugins/` folder.
 3. Restart the server. A default `config.yml` will be created.
 
