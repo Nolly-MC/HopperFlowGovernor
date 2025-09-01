@@ -4,7 +4,7 @@
 > Keep TPS high without breaking vanilla mechanics — no NMS, no item loss.
 
 [![Build](https://img.shields.io/github/actions/workflow/status/nolly-mc/HopperFlowGovernor/build.yml?style=for-the-badge)](https://github.com/nolly-mc/HopperFlowGovernor/actions)
-[![License](https://img.shields.io/github/license/nolly-mc/HopperFlowGovernor?style=for-the-badge)](LICENSE)
+[![License: NFE-OSL](https://img.shields.io/badge/License-NFE--OSL-pink?style=for-the-badge)](LICENSE)
 [![bStats](https://img.shields.io/bstats/servers/27129?style=for-the-badge)](https://bstats.org/plugin/bukkit/HopperFlowGovernor)
 
 ---
