@@ -1,0 +1,39 @@
+name: HopperFlowGovernor
+description: A hopper throttling plugin with detailed diagnostics
+main: com.nolly.hopperflow.HopperFlowPlugin
+version: 1.0.0
+api-version: '1.21'
+author: Nolly
+softdepend: [ WorldGuard ]
+
+commands:
+  hopperflow:
+    description: HopperFlow controls and diagnostics
+    usage: /<command> <top|inspect|detail|reload> [count]
+    aliases: [ hflow, hfg ]
+
+permissions:
+  hopperflow.notify:
+    description: Receive notifications about hopper throttling
+    default: op
+  hopperflow.command.help:
+    description: Show help
+    default: op
+  hopperflow.command.reload:
+    description: Reload config
+    default: op
+  hopperflow.command.inspect:
+    description: Inspect current chunk summary
+    default: op
+  hopperflow.command.detail:
+    description: Detailed initiator breakdown for current chunk
+    default: op
+  hopperflow.command.where:
+    description: List top throttled block/entity locations in this chunk
+    default: op
+  hopperflow.command.top:
+    description: Show top throttled chunks
+    default: op
+  hopperflow.bypass.block:
+    description: Exempt specific hoppers (by name or metadata)
+    default: op

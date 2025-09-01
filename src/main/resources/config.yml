@@ -1,0 +1,46 @@
+# HopperFlow Governor — caps inventory move events to stabilize TPS.
+# Pure Bukkit. No item loss. Cancels only excess moves per tick window.
+
+# Global per-chunk defaults (used when no per-type override exists)
+rate_per_chunk_per_sec: 80          # default average moves/s per chunk
+burst_per_chunk: 120                # default short-term burst tokens per chunk
+
+# Global ceiling across all chunks
+max_global_rate: 5000               # average moves/s allowed globally
+
+# Optional per-type overrides; omit or set null to use the global defaults above
+per_type_limits:
+  hopper_block: { rate: 80, burst: 120 }
+  hopper_minecart: { rate: 40, burst: 80 }
+  dropper: { rate: 40, burst: 80 }
+  dispenser: { rate: 20, burst: 40 }
+
+# Which initiators are governed?
+include:
+  hopper_blocks: true               # vanilla block hoppers
+  hopper_minecarts: false           # hopper minecart entities
+  droppers: false                   # droppers pushing into inventories
+  dispensers: false                 # dispensers pushing into inventories
+
+# Name-prefix exemptions per type (renaming the container/minecart bypasses throttle)
+exempt_name_prefixes:
+  hopper_block: "[FAST]"
+  hopper_minecart: ""
+  dropper: ""
+  dispenser: ""
+
+# World and WorldGuard exemptions
+exempt_worlds: [ the_end ]
+exempt_regions: [ ]                 # WG region IDs (if WorldGuard is installed)
+
+# Player feedback
+notify_players_near_throttle: true
+notify_radius: 16
+
+# Accounting window + cleanup
+stats_window_seconds: 60            # time window used by /inspect, /detail, /where, /top
+cleanup_after_minutes: 15           # drop idle chunk stats/buckets
+
+# Telemetry (bStats) — opt-in.
+metrics:
+  enabled: true
