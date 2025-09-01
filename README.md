@@ -1,4 +1,4 @@
-# HopperFlow Governor
+# <img src="logo.png" width="20rem"></img> HopperFlow Governor
 
 > ⚖️ Smart hopper & inventory-move throttling for Minecraft servers (1.21+).  
 > Keep TPS high without breaking vanilla mechanics — no NMS, no item loss.
