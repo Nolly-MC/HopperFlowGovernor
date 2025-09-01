@@ -156,7 +156,7 @@ Bug reports & feature requests → [GitHub Issues](https://github.com/nolly-mc/H
 
 ## 📜 License
 
-This project is licensed under the [MIT License](LICENSE).
+This project is licensed under the [NFE-OSL License](LICENSE).
 
 ---
 
